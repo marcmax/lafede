@@ -125,3 +125,10 @@ img{
     margin-right: auto;
     width: 50%;
 }
+.cancion-1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    white-space: pre-line;
+}
