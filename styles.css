@@ -3,6 +3,8 @@ body {
     background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
+    margin: 0;
+    padding: 0;
 }
 
 button {
@@ -96,6 +98,8 @@ header{
 #logo {
     text-align: center; /* Centrar horizontalmente */
     width: 100%;
+    
+    
 }
 .logo-image {
         width: 80px; /* Ajusta el ancho a 150 píxeles (puedes cambiar este valor) */
@@ -123,7 +127,7 @@ img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 100%;
 }
 .cancion-1{
     display: block;
@@ -131,4 +135,34 @@ img{
     margin-right: auto;
     width: 50%;
     white-space: pre-line;
+}
+#img-container {
+    position: relative;
+    width: 100vw;
+    margin: 0 calc(50% - 50vw);
+}
+
+#img1{
+    margin-top: -50px;
+    display: block;
+    width: 99.4vw;        /* full viewport width */
+    max-width: none;     /* ignore natural max-width */
+    height: auto;
+    box-sizing: border-box;
+    padding: 0;          /* override any inherited padding */
+    margin: 0 calc(50% - 50vw); /* center full-bleed element */
+    position: relative;
+    left: 0;
+}
+
+#img-text {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: 'Raleway', sans-serif;
 }
