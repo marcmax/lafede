@@ -5,9 +5,10 @@ body {
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Oculta la barra de scroll horizontal */
 }
 
-button {
+#menu-toggle {
     background-color: #e61942;
     color: white;
     border: none;
@@ -147,7 +148,7 @@ img{
     display: block;
     width: 99.4vw;        /* full viewport width */
     max-width: none;     /* ignore natural max-width */
-    height: auto;
+    height: 700px;
     box-sizing: border-box;
     padding: 0;          /* override any inherited padding */
     margin: 0 calc(50% - 50vw); /* center full-bleed element */
@@ -165,4 +166,58 @@ img{
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     font-family: 'Raleway', sans-serif;
+}
+#QS_button {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    top:60%
+}
+
+#QS_button a {
+    display: inline-block;
+    background-color: #e5183f;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#QS_button a:hover {
+    background-color: #6B0000;
+}
+
+footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #e61942;
+    color: white;
+    border-radius: 50%;
+    font-size: 24px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.social-btn:hover {
+    background-color: #cd121f;
+    transform: scale(1.1);
 }
