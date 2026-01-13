@@ -136,7 +136,6 @@ img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
 }
 .cancion-1{
     display: block;
@@ -237,6 +236,34 @@ footer {
     transform: scale(1.1);
 }
 
+/* Configuración base de el intercalado de imagen y texto*/
+.fila-seccion {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.fila-seccion img {
+    width: 50%;
+    height: auto;
+}
+
+.texto {
+    width: 50%;
+}
+
+/* LA MAGIA: Intercalar el orden */
+/* Selecciona las filas pares y cambia la dirección del flex */
+.fila-seccion:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.fila-seccion:nth-child(even) {
+    background-color:#8d8d8d ;
+}
+
 /* Media queries para dispositivos móviles */
 @media (max-width: 768px) {
     #img-text {
@@ -254,12 +281,19 @@ footer {
         padding: 10px 20px;
         font-size: 0.9em;
     }
+    
     .fila-seccion, .fila-seccion:nth-child(even) {
-            flex-direction: column; /* En móvil todos vuelven a orden normal */
-        }
-        .fila-seccion img, .texto {
-            width: 100%;
-        }
+        flex-direction: column;
+    }
+    
+    .fila-seccion img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .texto {
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -278,33 +312,5 @@ footer {
         padding: 8px 16px;
         font-size: 0.8em;
     }
-}
-
-/* Configuración base de el intercalado de imagen y texto*/
-    .fila-seccion {
-        display: flex;
-        align-items: center;
-        gap: 40px;
-        margin-bottom: 50px;
-        padding: 20px;
-    }
-
-    .fila-seccion img {
-        width: 50%;
-        height: auto;
-        
-    }
-
-    .texto {
-        width: 50%;
-    }
-
-    /* LA MAGIA: Intercalar el orden */
-    /* Selecciona las filas pares y cambia la dirección del flex */
-    .fila-seccion:nth-child(even) {
-        flex-direction: row-reverse;
-    }
-    .fila-seccion:nth-child(even) {
-    background-color:#8d8d8d ;
 }
     
