@@ -176,7 +176,8 @@ img{
 #QS_button {
     position: absolute;
     right: 40px;
-    bottom: 40px;
+    bottom: 250px;
+    
 }
 
 #QS_button a {
@@ -189,6 +190,7 @@ img{
     font-size: 1.1em;
     border-radius: 4px;
     transition: background-color 0.3s ease;
+    
 }
 
 #QS_button a:hover {
