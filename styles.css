@@ -1,11 +1,18 @@
 body {
     font-family: Arial, sans-serif;
-    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Oculta la barra de scroll horizontal */
+    
+}
+body.index {
+    background-color:#cd121f;
+}
+
+body.cancionero-page {
+    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
 #menu-toggle {
@@ -103,9 +110,10 @@ header{
     
 }
 .logo-image {
-        width: 80px; /* Ajusta el ancho a 150 píxeles (puedes cambiar este valor) */
-        height: auto; /* Mantiene la proporción de la imagen */
-        
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        transition: opacity 0.4s ease;
     }
 
 h1 {
@@ -246,6 +254,12 @@ footer {
         padding: 10px 20px;
         font-size: 0.9em;
     }
+    .fila-seccion, .fila-seccion:nth-child(even) {
+            flex-direction: column; /* En móvil todos vuelven a orden normal */
+        }
+        .fila-seccion img, .texto {
+            width: 100%;
+        }
 }
 
 @media (max-width: 480px) {
@@ -265,3 +279,32 @@ footer {
         font-size: 0.8em;
     }
 }
+
+/* Configuración base de el intercalado de imagen y texto*/
+    .fila-seccion {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        margin-bottom: 50px;
+        padding: 20px;
+    }
+
+    .fila-seccion img {
+        width: 50%;
+        height: auto;
+        
+    }
+
+    .texto {
+        width: 50%;
+    }
+
+    /* LA MAGIA: Intercalar el orden */
+    /* Selecciona las filas pares y cambia la dirección del flex */
+    .fila-seccion:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    .fila-seccion:nth-child(even) {
+    background-color:#8d8d8d ;
+}
+    
