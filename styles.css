@@ -188,7 +188,6 @@ img{
 #QS_button a:hover {
     background-color: #6B0000;
 }
-/* Configuración base de el intercalado de imagen y texto*/
 .fila-seccion {
     display: flex;
     align-items: center;
@@ -248,9 +247,25 @@ footer {
     background-color: #cd121f;
     transform: scale(1.1);
 }
+.image-footer {
+    display: flex; /* Usamos flex para hacerlo responsive. Esto convierte al elemento en un contenedor flexible donde todos sus hijos directos se convierten en elementos flexibles que pueden crecer, encogerse y distribuirse según el espacio disponible*/
+    justify-content: space-between;/*separacion entre logos, el primero toca el borde izquierdo y el ultimo toca el derecho*/
+    align-items: center;/*centra verticalmente*/
+    margin-bottom: 20px;
+}
+.footer-logoPC {
+    margin-left: 20px;
+    width: auto;           /* Ancho deseado */
+    height: 120px;           /* Evita deformación */
+   
+}
+.footer-logoFede {
+    margin-right: 20px;
+    width: auto;           /* Ancho deseado */
+    height: 120px;           /* Evita deformación */
+  
+}
 /*fin css footer*/
-
-
 /* Media queries para dispositivos móviles */
 @media (max-width: 768px) {
     #img-text {
@@ -281,6 +296,18 @@ footer {
     .texto {
         width: 100%;
     }
+    .footer-logoPC {
+    margin-left: 50px;        /* Quita el margen que usamos para empujar a la izquierda */
+    margin: auto;         /* Centra la imagen horizontalmente */
+    width: auto;
+    height: 80px;;           /* Evita deformación */
+}
+.footer-logoFede {
+    margin-right: 50px;        /* Quita el margen que usamos para empujar a la izquierda */
+    margin: auto;         /* Centra la imagen horizontalmente */
+    width: auto;
+    height: 80px;           /* Evita deformación */
+}
 }
 
 @media (max-width: 480px) {
