@@ -263,6 +263,18 @@ footer {
 .fila-seccion:nth-child(even) {
     background-color:#8d8d8d ;
 }
+/* Estado inicial: oculto y movido 30px hacia abajo */
+.fila-seccion {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out; /* Duración de la animación */
+}
+
+/* Estado cuando la sección es visible */
+.fila-seccion.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 /* Media queries para dispositivos móviles */
 @media (max-width: 768px) {

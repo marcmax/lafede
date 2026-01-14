@@ -24,4 +24,19 @@ document.getElementById('close-menu').addEventListener('click', function() {
                 logoImg.style.opacity = '1';
             }, 100);
         });
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // Si la sección entra en el campo de visión
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.2 // Se activa cuando el 20% de la sección es visible
+    });
+
+    // Seleccionamos todas nuestras filas y empezamos a observar
+    const secciones = document.querySelectorAll('.fila-seccion');
+    secciones.forEach(seccion => observer.observe(seccion));
     
