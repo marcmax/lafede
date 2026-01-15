@@ -123,7 +123,7 @@ body {
   
 }
 body.index {
-    background-color:#cd121f;
+    background-color:#000000;
 }
 
 body.cancionero-page {
@@ -217,8 +217,10 @@ img{
     display: flex;
     align-items: center;
     gap: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 0!important;;
     padding: 20px;
+    
+    
 }
 .fila-seccion img {
     width: 50%;
@@ -226,12 +228,23 @@ img{
 }
 .texto {
     width: 50%;
+   color: #FFFFFF !important;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+  font-weight: 600;          /* Un poco más de grosor ayuda */
+  line-height: 1.6;          /* Más espacio entre líneas */
+  letter-spacing: 0.5px;     /* Un ligero espacio entre letras */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; /* Suaviza los bordes en Mac/iOS */
+  text-shadow: 0 1px 2px dotted rgba(0, 0, 0, 0.2);
+}
+.texto p {
+  color: #FFFFFF; /* Blanco puro para máxima legibilidad */
 }
 .fila-seccion:nth-child(even) {
     flex-direction: row-reverse;
 }
 .fila-seccion:nth-child(even) {
-    background-color:#8d8d8d ;
+    background-color:#640000 ;
 }
 .fila-seccion {
     opacity: 0;
@@ -248,7 +261,7 @@ footer {
     background-color: #333;
     padding: 20px;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 0 !important;
 }
 #social-links {
     display: flex;
@@ -266,7 +279,7 @@ footer {
     border-radius: 50%;
     font-size: 24px;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    text-decoration: none;
+    margin-top: -100px;
 }
 .social-btn:hover {
     background-color: #cd121f;
@@ -314,8 +327,9 @@ footer {
     }
     
     .fila-seccion img {
-        width: 100%;
+        width: 110%;
         height: auto;
+        margin-left: -20px;
       
     }
     
@@ -329,6 +343,7 @@ footer {
     height: 80px;;           /* Evita deformación */
 }
 .footer-logoFede {
+    position: absolute;
     margin-right: 50px;        /* Quita el margen que usamos para empujar a la izquierda */
     margin: auto;         /* Centra la imagen horizontalmente */
     width: auto;
