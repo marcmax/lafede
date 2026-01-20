@@ -150,6 +150,9 @@ img{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    user-select: none;           
+    -webkit-user-drag: none;    
+    pointer-events: none;
 }
 .cancion-1{
     display: block;
@@ -259,14 +262,13 @@ img{
 /*inicio css footer */
 footer {
     background-color: #333;
-    padding: 20px;
+    padding: 40px 20px; /* Más padding para que respire */
     text-align: center;
-    margin-top: 0 !important;
 }
 #social-links {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
 }
 .social-btn {
     display: inline-flex;
@@ -275,34 +277,32 @@ footer {
     width: 50px;
     height: 50px;
     background-color: #e61942;
-    color: white;
     border-radius: 50%;
-    font-size: 24px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-top: -100px;
+    transition: all 0.3s ease;
+    /* Eliminamos el margin-top negativo que rompía el diseño */
 }
 .social-btn:hover {
     background-color: #cd121f;
     transform: scale(1.1);
 }
 .image-footer {
-    display: flex; /* Usamos flex para hacerlo responsive. Esto convierte al elemento en un contenedor flexible donde todos sus hijos directos se convierten en elementos flexibles que pueden crecer, encogerse y distribuirse según el espacio disponible*/
-    justify-content: space-between;/*separacion entre logos, el primero toca el borde izquierdo y el ultimo toca el derecho*/
-    align-items: center;/*centra verticalmente*/
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos bajen si no hay espacio */
+    gap: 20px;
 }
-.footer-logoPC {
-    margin-left: 20px;
-    width: auto;           /* Ancho deseado */
-    height: 120px;           /* Evita deformación */
-   
+.footer-logoPC, .footer-logoFede {
+    width: auto;
+    height: 100px; /* Reduje un poco el alto para mejor balance */
+    transition: height 0.3s ease;
 }
-.footer-logoFede {
-    margin-right: 20px;
-    width: auto;           /* Ancho deseado */
-    height: 120px;           /* Evita deformación */
-  
+.social-icon {
+    width: 25px;
+    height: 25px;
+    filter: brightness(0) invert(1); /* Esto vuelve blanco tu SVG si es negro */
 }
+
 /*fin css footer*/
 /* Media queries para dispositivos móviles */
 @media (max-width: 768px) {
@@ -336,19 +336,20 @@ footer {
     .texto {
         width: 100%;
     }
-    .footer-logoPC {
-    margin-left: 50px;        /* Quita el margen que usamos para empujar a la izquierda */
-    margin: auto;         /* Centra la imagen horizontalmente */
-    width: auto;
-    height: 80px;;           /* Evita deformación */
-}
-.footer-logoFede {
-    position: absolute;
-    margin-right: 50px;        /* Quita el margen que usamos para empujar a la izquierda */
-    margin: auto;         /* Centra la imagen horizontalmente */
-    width: auto;
-    height: 80px;           /* Evita deformación */
-}
+  .image-footer {
+        flex-direction: column; /* Apila todo verticalmente */
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .footer-logoPC, .footer-logoFede {
+        margin: 0; /* Quitamos márgenes laterales */
+        height: 80px; /* Logos más pequeños en celular */
+    }
+
+    #social-links {
+        order: 3; /* Opcional: mueve los botones sociales abajo de todo */
+    }
 
 }
 
