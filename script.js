@@ -21,5 +21,17 @@ document.getElementById('close-menu').addEventListener('click', function() {
 
     // Seleccionamos todas nuestras filas y empezamos a observar
     const secciones = document.querySelectorAll('.fila-seccion');
+   
     secciones.forEach(seccion => observer.observe(seccion));
-    
+    document.addEventListener('contextmenu', function(e) {
+        if (e.target.tagName === 'IMG') {
+            e.preventDefault();
+        }
+    }, false);
+
+    // Evita que las imágenes se arrastren (refuerzo del CSS)
+    document.addEventListener('dragstart', function(e) {
+        if (e.target.tagName === 'IMG') {
+            e.preventDefault();
+        }
+    }, false);

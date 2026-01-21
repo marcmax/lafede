@@ -102,7 +102,7 @@ header{
     height: 100%;
     object-fit: contain;
     clip-path: inset(100% 0 0 0);    
-    transition: clip-path 0.6s ease-in-out, opacity 0.1s ease;
+    transition: clip-path 0.2s ease-in-out, opacity 0.1s ease;
     opacity: 0;
 }
 #logo a:hover .logo-image-color {
@@ -123,21 +123,32 @@ body {
   
 }
 body.index {
-    background-color:#000000;
+    background-color:#333;
 }
 
 body.cancionero-page {
     background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-image: url('images/fondo2.png');
+    height: auto;
+    background-repeat: no-repeat;        
 }
 h1 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'helvetica neue';
     text-align: center;
     color: #e61942;
     margin-top: 20px;
     font-size: 2.5em;
 }
+h2 {
+    font-family: 'helvetica neue';
+    text-align: center;
+    color: #e61942;
+    margin-top: 20px;
+    font-size: 2.5em;
+}
+
 p {
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
@@ -232,7 +243,7 @@ img{
 .texto {
     width: 50%;
    color: #FFFFFF !important;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+  
   font-weight: 600;          /* Un poco más de grosor ayuda */
   line-height: 1.6;          /* Más espacio entre líneas */
   letter-spacing: 0.5px;     /* Un ligero espacio entre letras */
@@ -241,13 +252,17 @@ img{
   text-shadow: 0 1px 2px dotted rgba(0, 0, 0, 0.2);
 }
 .texto p {
-  color: #FFFFFF; /* Blanco puro para máxima legibilidad */
+  color: #e61942; /* Blanco puro para máxima legibilidad */
+    font-family:'league spartan';
+    font-weight: 900;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Crea un relieve imperceptible pero efectivo */
+    line-height: 1.8;
 }
 .fila-seccion:nth-child(even) {
     flex-direction: row-reverse;
 }
 .fila-seccion:nth-child(even) {
-    background-color:#640000 ;
+    background-color:#f5f5f5 ;
 }
 .fila-seccion {
     opacity: 0;
