@@ -28,14 +28,41 @@ header{
     left: 0; /* Mostrar el menú */
 }
 .close-btn {
-    background: none; /* Sin fondo */
-    color: red; /* Color de la X */
-    font-size: 24px; /* Tamaño de la X */
-    border: none; /* Sin borde */
-    cursor: pointer; /* Cambiar cursor a puntero */
-    position: absolute; /* Posicionar la X */
-    top: 0px; /* Espaciado desde la parte superior */
-    left: 200px; /* Espaciado desde la derecha */
+    background: none;
+    border: none;
+    cursor: pointer;
+    
+    /* Posicionamiento dentro del sidebar */
+    position: absolute; 
+    top: 5px; 
+    right: 15px; /* Mejor usar right que left en un menú lateral */
+    
+    /* Tamaño del área del botón */
+    width: 50px; 
+    height: 50px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    z-index: 10;
+    filter:invert(15%) sepia(95%) saturate(6932%) hue-rotate(358deg) brightness(95%) contrast(112%);
+}
+
+.img-close-btn {
+    /* Esto hace que la imagen SVG ocupe todo el botón */
+    width: 60%;
+    height: 60%;
+    display: block;
+    /* Evita que se vea borrosa y elimina interferencias */
+    pointer-events: none; 
+    filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.2)); /* Opcional: una leve sombra */
+}
+
+/* Animación de rotación al pasar el mouse */
+.close-btn:hover .img-close-btn {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
 }
 .menu {
     list-style-type: none;
